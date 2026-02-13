@@ -1,47 +1,46 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { navigation, type NavSection } from "./nav-data"
+import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { navigation, type NavSection } from "./nav-data";
 
 interface DesktopNavProps {
-  isScrolled: boolean
+  isScrolled: boolean;
 }
 
 export function DesktopNav({ isScrolled }: DesktopNavProps) {
-  const [activeMenu, setActiveMenu] = React.useState<string | null>(null)
+  const [activeMenu, setActiveMenu] = React.useState<string | null>(null);
 
   return (
-    <nav
-      className={cn(
-        "hidden lg:flex items-center justify-between w-full transition-all duration-300",
-        isScrolled ? "py-3" : "py-5"
-      )}
-    >
+    <nav className="hidden lg:flex items-center justify-between w-full py-4">
       {/* Logo */}
-      <Link href="/" className="flex items-center gap-3 shrink-0">
-        <div className={cn(
-          "relative transition-all duration-300",
-          isScrolled ? "w-10 h-10" : "w-14 h-14"
-        )}>
+      <Link href="/" className="shrink-0">
+        <div className="relative min-w-[200px] h-14">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-cropped.png"
             alt="Westwood Boys School"
             fill
-            className="object-contain"
+            className={cn(
+              "object-contain object-left transition-opacity duration-300",
+              isScrolled ? "opacity-0" : "opacity-100"
+            )}
             priority
           />
-        </div>
-        <div className={cn(
-          "font-serif font-semibold transition-all duration-300",
-          isScrolled ? "text-lg" : "text-xl"
-        )}>
-          <span className="text-brand-navy">Westwood Boys</span>
+          <Image
+            src="/images/logo-dark-cropped.png"
+            alt="Westwood Boys School"
+            fill
+            className={cn(
+              "object-contain object-left transition-opacity duration-300",
+              isScrolled ? "opacity-100" : "opacity-0"
+            )}
+            priority
+          />
         </div>
       </Link>
 
@@ -52,6 +51,7 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
             key={section.label}
             section={section}
             isActive={activeMenu === section.label}
+            isScrolled={isScrolled}
             onMouseEnter={() => setActiveMenu(section.label)}
             onMouseLeave={() => setActiveMenu(null)}
           />
@@ -63,33 +63,40 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
         <Link href="/admissions">Book a Visit</Link>
       </Button>
     </nav>
-  )
+  );
 }
 
 interface NavItemComponentProps {
-  section: NavSection
-  isActive: boolean
-  onMouseEnter: () => void
-  onMouseLeave: () => void
+  section: NavSection;
+  isActive: boolean;
+  isScrolled: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
 }
 
 function NavItemComponent({
   section,
   isActive,
+  isScrolled,
   onMouseEnter,
   onMouseLeave,
 }: NavItemComponentProps) {
-  const hasDropdown = section.items && section.items.length > 0
+  const hasDropdown = section.items && section.items.length > 0;
 
   if (!hasDropdown) {
     return (
       <Link
         href={section.href || "#"}
-        className="px-4 py-2 text-text-secondary hover:text-brand-navy font-medium transition-colors"
+        className={cn(
+          "px-4 py-2 font-medium transition-colors",
+          isScrolled
+            ? "text-text-secondary hover:text-brand-navy"
+            : "text-white/80 hover:text-white",
+        )}
       >
         {section.label}
       </Link>
-    )
+    );
   }
 
   return (
@@ -101,14 +108,20 @@ function NavItemComponent({
       <button
         className={cn(
           "flex items-center gap-1 px-4 py-2 font-medium transition-colors",
-          isActive ? "text-brand-navy" : "text-text-secondary hover:text-brand-navy"
+          isScrolled
+            ? isActive
+              ? "text-brand-navy"
+              : "text-text-secondary hover:text-brand-navy"
+            : isActive
+              ? "text-white"
+              : "text-white/80 hover:text-white",
         )}
       >
         {section.label}
         <ChevronDown
           className={cn(
             "w-4 h-4 transition-transform duration-200",
-            isActive && "rotate-180"
+            isActive && "rotate-180",
           )}
         />
       </button>
@@ -146,5 +159,5 @@ function NavItemComponent({
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

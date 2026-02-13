@@ -2,13 +2,24 @@
 
 import * as React from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { cn } from "@/lib/utils"
 import { DesktopNav } from "./desktop-nav"
 import { MobileNav } from "./mobile-nav"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const { scrollY } = useScroll()
+
+  // Background tied to scroll position
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 100],
+    ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.85)"]
+  )
+  const backdropBlur = useTransform(
+    scrollY,
+    [0, 100],
+    ["blur(0px)", "blur(16px)"]
+  )
 
   React.useEffect(() => {
     const unsubscribe = scrollY.on("change", (y) => {
@@ -19,12 +30,12 @@ export function Header() {
 
   return (
     <motion.header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "glass border-b border-slate-200/50 shadow-sm"
-          : "bg-transparent"
-      )}
+      className="fixed top-0 left-0 right-0 z-50"
+      style={{
+        backgroundColor,
+        backdropFilter: backdropBlur,
+        WebkitBackdropFilter: backdropBlur,
+      }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}

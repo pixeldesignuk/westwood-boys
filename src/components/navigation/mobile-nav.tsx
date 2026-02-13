@@ -35,30 +35,38 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
   return (
     <div className="lg:hidden">
       {/* Mobile Header */}
-      <div
-        className={cn(
-          "flex items-center justify-between w-full transition-all duration-300",
-          isScrolled ? "py-3" : "py-4"
-        )}
-      >
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative w-10 h-10">
+      <div className="flex items-center justify-between w-full py-3">
+        <Link href="/">
+          <div className="relative min-w-[200px] h-12">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-white.png"
               alt="Westwood Boys School"
               fill
-              className="object-contain"
+              className={cn(
+                "object-contain object-left transition-opacity duration-300",
+                isScrolled ? "opacity-0" : "opacity-100"
+              )}
+              priority
+            />
+            <Image
+              src="/images/logo-dark.png"
+              alt="Westwood Boys School"
+              fill
+              className={cn(
+                "object-contain object-left transition-opacity duration-300",
+                isScrolled ? "opacity-100" : "opacity-0"
+              )}
               priority
             />
           </div>
-          <span className="font-serif font-semibold text-brand-navy">
-            Westwood Boys
-          </span>
         </Link>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 text-brand-navy"
+          className={cn(
+            "p-2 transition-colors duration-300",
+            isScrolled ? "text-brand-navy" : "text-white"
+          )}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
