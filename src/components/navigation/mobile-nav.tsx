@@ -100,16 +100,17 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
               </Button> */}
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Info — hidden until ready
             <div className="mt-8 text-center text-sm text-text-muted">
               <p className="mb-2">Questions? Call us</p>
               <a
-                href="tel:+441onal"
+                href="tel:01614590024"
                 className="text-brand-navy font-semibold text-lg"
               >
-                01onal 123 456
+                0161 459 0024
               </a>
             </div>
+            */}
           </nav>
         </div>
       )}
