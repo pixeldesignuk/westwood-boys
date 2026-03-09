@@ -44,11 +44,11 @@ export function HeroSection() {
 
       {/* Content — bottom-aligned on mobile, centered on desktop */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 pt-48 sm:pb-32 lg:py-40">
-        <div className="max-w-4xl">
-          {/* Tagline — responsive sizing */}
-          <div className="mb-3 lg:mb-6">
+        <div className="w-full lg:w-3/5">
+          {/* Tagline — 2/5 width on desktop */}
+          <div className="mb-3 lg:mb-6 lg:w-2/3">
             <h1
-              className="font-serif text-[3.5rem] sm:text-6xl lg:text-display text-white font-semibold tracking-tight leading-[1.05]"
+              className="font-serif text-[3.5rem] sm:text-6xl lg:text-[5.5rem] text-white font-semibold tracking-tight leading-[1.05]"
               style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
             >
               Change{" "}
@@ -57,9 +57,9 @@ export function HeroSection() {
             </h1>
           </div>
 
-          {/* Subheadline — compact on mobile */}
+          {/* Subheadline — full width of container (3/5) */}
           <p
-            className="text-sm sm:text-base lg:text-body-lg text-white/90 max-w-2xl mb-6 lg:mb-10 leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 lg:mb-10 leading-relaxed"
             style={{ textShadow: "0 1px 4px rgba(0,0,0,0.35)" }}
           >
             Where faith meets excellence. An independent Muslim secondary school
@@ -67,7 +67,7 @@ export function HeroSection() {
             and Islamic values.
           </p>
 
-          {/* CTA Buttons — smaller on mobile */}
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button variant="cta" size="lg" asChild className="lg:!h-14 lg:!px-8 lg:!text-base">
               <Link href="/admissions">
