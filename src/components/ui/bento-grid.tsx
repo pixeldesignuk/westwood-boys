@@ -1,7 +1,4 @@
-"use client"
-
 import * as React from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 interface BentoGridProps {
@@ -57,7 +54,7 @@ export function BentoCard({
   variant = "default",
   href,
 }: BentoCardProps) {
-  const Wrapper = href ? motion.a : motion.div
+  const Wrapper = href ? "a" : "div"
   const wrapperProps = href ? { href } : {}
 
   return (
@@ -65,16 +62,11 @@ export function BentoCard({
       {...wrapperProps}
       className={cn(
         "group relative rounded-3xl p-6 lg:p-8 transition-all duration-300",
-        "hover:scale-[1.02] cursor-pointer",
+        "cursor-pointer",
         sizeClasses[size],
         variantClasses[variant],
         className
       )}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ y: -4 }}
     >
       {icon && (
         <div className={cn(

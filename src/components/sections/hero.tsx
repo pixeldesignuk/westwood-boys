@@ -1,99 +1,93 @@
-"use client"
-
-import * as React from "react"
+import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { Play, ArrowRight } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { FloatingShapes } from "@/components/ui/floating-shapes"
-
-const taglineLetters = "CHANGE THE WORLD".split("")
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center hero-gradient overflow-hidden">
-      {/* Floating geometric shapes */}
-      <FloatingShapes variant="hero" />
+    <section className="relative min-h-screen flex items-end lg:items-center overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/mayor.jpg"
+        alt="Students with the Mayor"
+        fill
+        className="object-cover"
+        priority
+      />
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+      {/* Desktop: left-heavy horizontal gradient */}
+      <div
+        className="absolute inset-0 hidden lg:block"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(18,31,72,0.75) 0%, rgba(18,31,72,0.45) 50%, rgba(18,31,72,0.15) 100%)",
+        }}
+      />
+
+      {/* Mobile: top strip for header readability + bottom-heavy gradient for content */}
+      <div
+        className="absolute inset-0 lg:hidden"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(18,31,72,0.55) 0%, rgba(18,31,72,0.1) 15%, rgba(18,31,72,0.15) 35%, rgba(18,31,72,0.7) 60%, rgba(18,31,72,0.85) 100%)",
+        }}
+      />
+
+      {/* Bottom scrim for trust bar (desktop) */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-40 hidden lg:block"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(18,31,72,0.7) 0%, transparent 100%)",
+        }}
+      />
+
+      {/* Content — bottom-aligned on mobile, centered on desktop */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 pt-48 sm:pb-32 lg:py-40">
         <div className="max-w-4xl">
-          {/* Animated Tagline */}
-          <motion.div
-            className="mb-6"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.05,
-                },
-              },
-            }}
-          >
-            <h1 className="font-serif text-display text-white flex flex-wrap">
-              {taglineLetters.map((letter, index) => (
-                <motion.span
-                  key={index}
-                  className={letter === " " ? "w-4 lg:w-6" : ""}
-                  variants={{
-                    hidden: { opacity: 0, y: 50 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
+          {/* Tagline — responsive sizing */}
+          <div className="mb-3 lg:mb-6">
+            <h1
+              className="font-serif text-[3.5rem] sm:text-6xl lg:text-display text-white font-semibold tracking-tight leading-[1.05]"
+              style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
+            >
+              Change{" "}
+              <br className="lg:hidden" />
+              the World
             </h1>
-          </motion.div>
+          </div>
 
-          {/* Subheadline */}
-          <motion.p
-            className="text-body-lg text-white/80 max-w-2xl mb-8 lg:mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
+          {/* Subheadline — compact on mobile */}
+          <p
+            className="text-sm sm:text-base lg:text-body-lg text-white/90 max-w-2xl mb-6 lg:mb-10 leading-relaxed"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,0.35)" }}
           >
             Where faith meets excellence. An independent Muslim secondary school
             nurturing tomorrow&apos;s leaders through academic rigour, character development,
             and Islamic values.
-          </motion.p>
+          </p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
-          >
-            <Button variant="cta" size="xl" asChild>
-              <Link href="/admissions" className="group">
+          {/* CTA Buttons — smaller on mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Button variant="cta" size="lg" asChild className="lg:!h-14 lg:!px-8 lg:!text-base">
+              <Link href="/admissions">
                 Book a Visit
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
               </Link>
             </Button>
-            <Button variant="glass-dark" size="xl" asChild>
-              <Link href="/about/welcome" className="group">
-                <Play className="w-5 h-5" />
+            <Button variant="glass-dark" size="lg" asChild className="lg:!h-14 lg:!px-8 lg:!text-base">
+              <Link href="/about/welcome">
                 Watch Our Story
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      {/* Trust Bar */}
-      <motion.div
-        className="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-sm border-t border-white/10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.6 }}
-      >
+      {/* Trust Bar — hidden on mobile to free up space, visible md+ */}
+      <div className="absolute bottom-0 left-0 right-0 hidden md:block bg-white/10 backdrop-blur-sm border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-4 gap-6 lg:gap-8">
             <TrustItem
               icon="star"
               title="Outstanding"
@@ -116,7 +110,7 @@ export function HeroSection() {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

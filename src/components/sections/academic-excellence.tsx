@@ -1,8 +1,4 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowRight, GraduationCap, BookOpen, Award, Users } from "lucide-react"
 import { Section, Container, SectionHeader } from "@/components/ui/section"
 import { StatsGrid } from "@/components/ui/stats"
@@ -49,26 +45,16 @@ export function AcademicExcellenceSection() {
         />
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
-        >
+        <div className="mb-16">
           <StatsGrid stats={stats} variant="card" />
-        </motion.div>
+        </div>
 
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {highlights.map((item, index) => (
-            <motion.div
+          {highlights.map((item) => (
+            <div
               key={item.title}
               className="bg-white rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <div className="w-12 h-12 rounded-xl bg-brand-navy/5 flex items-center justify-center mb-4">
                 <item.icon className="w-6 h-6 text-brand-navy" />
@@ -79,7 +65,7 @@ export function AcademicExcellenceSection() {
               <p className="text-text-muted text-sm">
                 {item.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -88,7 +74,7 @@ export function AcademicExcellenceSection() {
           <Button variant="default" size="lg" asChild>
             <Link href="/academics/curriculum" className="group">
               Explore Our Curriculum
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
         </div>

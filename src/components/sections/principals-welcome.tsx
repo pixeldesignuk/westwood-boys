@@ -1,9 +1,5 @@
-"use client"
-
-import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowRight, Quote } from "lucide-react"
 import { Section, Container } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
@@ -14,13 +10,7 @@ export function PrincipalsWelcomeSection() {
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className="relative">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
               <Image
                 src="/images/principal.jpg"
@@ -34,15 +24,10 @@ export function PrincipalsWelcomeSection() {
             {/* Decorative accent */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-gold/10 rounded-3xl -z-10" />
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-brand-navy/5 rounded-3xl -z-10" />
-          </motion.div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div>
             <span className="inline-block text-accent-gold font-medium text-sm uppercase tracking-wider mb-4">
               Welcome Message
             </span>
@@ -83,10 +68,10 @@ export function PrincipalsWelcomeSection() {
             <Button variant="default" size="lg" asChild>
               <Link href="/about/welcome" className="group">
                 Read Full Welcome
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </Section>

@@ -1,9 +1,5 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { Section, Container } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
@@ -33,12 +29,7 @@ export function FaithValuesSection() {
       <Container className="relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="inline-block text-accent-gold font-medium text-sm uppercase tracking-wider mb-4">
               Faith & Values
             </span>
@@ -52,18 +43,14 @@ export function FaithValuesSection() {
             </p>
 
             <ul className="space-y-4 mb-8">
-              {values.map((value, index) => (
-                <motion.li
+              {values.map((value) => (
+                <li
                   key={value}
                   className="flex items-center gap-3 text-white/90"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <CheckCircle className="w-5 h-5 text-accent-gold shrink-0" />
                   <span>{value}</span>
-                </motion.li>
+                </li>
               ))}
             </ul>
 
@@ -71,7 +58,7 @@ export function FaithValuesSection() {
               <Button variant="cta" size="lg" asChild>
                 <Link href="/about/mission" className="group">
                   Our Mission
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
               <Button variant="glass-dark" size="lg" asChild>
@@ -80,16 +67,10 @@ export function FaithValuesSection() {
                 </Link>
               </Button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div className="relative">
             <div className="relative aspect-square rounded-3xl overflow-hidden">
               <Image
                 src="/images/prayer.jpg"
@@ -100,7 +81,7 @@ export function FaithValuesSection() {
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent-gold/20 rounded-3xl -z-10" />
-          </motion.div>
+          </div>
         </div>
       </Container>
     </Section>

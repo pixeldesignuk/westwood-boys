@@ -1,9 +1,5 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { ArrowRight, Calendar } from "lucide-react"
 import { Section, Container, SectionHeader } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
@@ -55,14 +51,10 @@ export function NewsEventsSection() {
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {newsItems.map((item, index) => (
-            <motion.article
+          {newsItems.map((item) => (
+            <article
               key={item.title}
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Link href={item.href}>
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -70,7 +62,7 @@ export function NewsEventsSection() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover"
                   />
                   <div className="absolute top-4 left-4">
                     <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm">
@@ -91,7 +83,7 @@ export function NewsEventsSection() {
                   </p>
                 </div>
               </Link>
-            </motion.article>
+            </article>
           ))}
         </div>
 
@@ -99,7 +91,7 @@ export function NewsEventsSection() {
           <Button variant="outline" size="lg" asChild>
             <Link href="/news" className="group">
               View All News
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
         </div>

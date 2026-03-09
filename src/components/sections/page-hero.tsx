@@ -1,9 +1,4 @@
-"use client"
-
-import * as React from "react"
-import { motion } from "framer-motion"
 import { Container } from "@/components/ui/section"
-import { FloatingShapes } from "@/components/ui/floating-shapes"
 
 interface PageHeroProps {
   title: string
@@ -14,15 +9,8 @@ interface PageHeroProps {
 export function PageHero({ title, subtitle, description }: PageHeroProps) {
   return (
     <section className="relative hero-gradient overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-      <FloatingShapes variant="hero" />
-
       <Container className="relative z-10">
-        <motion.div
-          className="max-w-3xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="max-w-3xl">
           {subtitle && (
             <span className="inline-block text-accent-gold font-medium text-sm uppercase tracking-wider mb-4">
               {subtitle}
@@ -36,7 +24,7 @@ export function PageHero({ title, subtitle, description }: PageHeroProps) {
               {description}
             </p>
           )}
-        </motion.div>
+        </div>
       </Container>
     </section>
   )

@@ -1,8 +1,4 @@
-"use client"
-
-import * as React from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { ArrowRight, Calendar, Phone } from "lucide-react"
 import { Section, Container } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
@@ -12,50 +8,26 @@ export function CTASection() {
     <Section background="gradient" padding="lg">
       <Container>
         <div className="text-center max-w-3xl mx-auto">
-          <motion.span
-            className="inline-block text-accent-gold font-medium text-sm uppercase tracking-wider mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+          <span className="inline-block text-accent-gold font-medium text-sm uppercase tracking-wider mb-4">
             Begin Your Journey
-          </motion.span>
+          </span>
 
-          <motion.h2
-            className="font-serif text-h1 text-white mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <h2 className="font-serif text-h1 text-white mb-6">
             Ready to Change the World?
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            className="text-body-lg text-white/80 mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <p className="text-body-lg text-white/80 mb-10">
             Take the first step towards an exceptional education for your son.
             Book a visit to experience our school community firsthand, or contact
             us to learn more about admissions.
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="flex flex-col sm:flex-row justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button variant="cta" size="xl" asChild>
               <Link href="/admissions/open-days" className="group">
                 <Calendar className="w-5 h-5" />
                 Book an Open Day
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="glass-dark" size="xl" asChild>
@@ -64,15 +36,9 @@ export function CTASection() {
                 Contact Us
               </Link>
             </Button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="mt-12 pt-8 border-t border-white/10"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <div className="mt-12 pt-8 border-t border-white/10">
             <p className="text-white/60 text-sm mb-4">
               Questions? We&apos;re here to help.
             </p>
@@ -85,7 +51,7 @@ export function CTASection() {
                 admissions@westwoodboys.org
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </Section>

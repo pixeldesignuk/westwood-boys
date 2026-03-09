@@ -166,16 +166,9 @@
   }
 }
 
-/* Hero gradient animation */
+/* Hero gradient */
 .hero-gradient {
   background: linear-gradient(135deg, #121F48, #1E3A5F, #0A1229);
-  background-size: 200% 200%;
-  animation: gradientShift 20s ease infinite;
-}
-
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 /* Glassmorphism utility */
@@ -189,20 +182,6 @@
   background: rgba(18, 31, 72, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .hero-gradient {
-    animation: none;
-    background-position: 0% 50%;
-  }
-
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }
 
 /* Custom scrollbar */
@@ -268,22 +247,9 @@
   font-weight: 400;
 }
 
-/* Link underline animation */
+/* Link underline */
 .link-underline {
   position: relative;
-}
-
-.link-underline::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.3s ease;
-}
-
-.link-underline:hover::after {
-  width: 100%;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

@@ -1,8 +1,4 @@
-"use client"
-
-import * as React from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Quote } from "lucide-react"
 
@@ -30,16 +26,12 @@ export function TestimonialCard({
   className,
 }: TestimonialCardProps) {
   return (
-    <motion.div
+    <div
       className={cn(
         "rounded-3xl p-6 lg:p-8 relative",
         variantClasses[variant],
         className
       )}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
     >
       <Quote
         className={cn(
@@ -81,6 +73,6 @@ export function TestimonialCard({
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

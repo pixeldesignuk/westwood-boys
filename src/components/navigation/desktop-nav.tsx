@@ -3,7 +3,6 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -26,7 +25,7 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
             alt="Westwood Boys School"
             fill
             className={cn(
-              "object-contain object-left transition-opacity duration-300",
+              "object-contain object-left",
               isScrolled ? "opacity-0" : "opacity-100"
             )}
             priority
@@ -36,7 +35,7 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
             alt="Westwood Boys School"
             fill
             className={cn(
-              "object-contain object-left transition-opacity duration-300",
+              "object-contain object-left",
               isScrolled ? "opacity-100" : "opacity-0"
             )}
             priority
@@ -120,44 +119,36 @@ function NavItemComponent({
         {section.label}
         <ChevronDown
           className={cn(
-            "w-4 h-4 transition-transform duration-200",
+            "w-4 h-4",
             isActive && "rotate-180",
           )}
         />
       </button>
 
-      <AnimatePresence>
-        {isActive && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 pt-2"
-          >
-            <div className="glass rounded-2xl p-4 shadow-xl border border-slate-200 min-w-[320px]">
-              <div className="grid gap-1">
-                {section.items?.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="group flex flex-col gap-1 rounded-xl p-3 hover:bg-surface-slate transition-colors"
-                  >
-                    <span className="font-medium text-brand-navy group-hover:text-accent-gold transition-colors">
-                      {item.label}
+      {isActive && (
+        <div className="absolute top-full left-0 pt-2">
+          <div className="glass rounded-2xl p-4 shadow-xl border border-slate-200 min-w-[320px]">
+            <div className="grid gap-1">
+              {section.items?.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group flex flex-col gap-1 rounded-xl p-3 hover:bg-surface-slate transition-colors"
+                >
+                  <span className="font-medium text-brand-navy group-hover:text-accent-gold transition-colors">
+                    {item.label}
+                  </span>
+                  {item.description && (
+                    <span className="text-sm text-text-muted">
+                      {item.description}
                     </span>
-                    {item.description && (
-                      <span className="text-sm text-text-muted">
-                        {item.description}
-                      </span>
-                    )}
-                  </Link>
-                ))}
-              </div>
+                  )}
+                </Link>
+              ))}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

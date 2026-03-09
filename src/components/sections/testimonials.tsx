@@ -1,7 +1,3 @@
-"use client"
-
-import * as React from "react"
-import { motion } from "framer-motion"
 import { Section, Container, SectionHeader } from "@/components/ui/section"
 import { TestimonialCard } from "@/components/ui/testimonial-card"
 
@@ -35,20 +31,14 @@ export function TestimonialsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.author}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <div key={testimonial.author}>
               <TestimonialCard
                 quote={testimonial.quote}
                 author={testimonial.author}
                 role={testimonial.role}
                 variant={index === 1 ? "feature" : "default"}
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </Container>
