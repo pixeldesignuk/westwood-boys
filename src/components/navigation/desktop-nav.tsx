@@ -57,10 +57,11 @@ export function DesktopNav({ isScrolled }: DesktopNavProps) {
         ))}
       </div>
 
-      {/* CTA Button */}
+      {/* CTA Button — hidden until admissions content is ready
       <Button variant="cta" size="lg" asChild>
         <Link href="/admissions">Book a Visit</Link>
       </Button>
+      */}
     </nav>
   );
 }

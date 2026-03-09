@@ -1,13 +1,10 @@
 import type { Metadata } from "next"
-import Image from "next/image"
-import { PageHero, CTASection } from "@/components/sections"
+import { PageHero } from "@/components/sections"
 import { Section, Container } from "@/components/ui/section"
-import { Quote } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Message from the Chair of Governors",
-  description:
-    "A message from the Chair of Governors of Westwood Boys School, sharing our vision and commitment to excellence in Islamic education.",
+  description: "A message from the Chair of Governors at Westwood Boys School.",
 }
 
 export default function ChairsMessagePage() {
@@ -15,104 +12,45 @@ export default function ChairsMessagePage() {
     <>
       <PageHero
         title="Message from the Chair of Governors"
-        subtitle="About Us"
-        description="A word from our Chair about the vision and values that guide Westwood Boys School."
+        subtitle="Our School"
       />
 
       <Section background="white" padding="lg">
-        <Container size="sm">
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            {/* Photo and Details */}
-            <div className="lg:w-1/3 shrink-0">
-              <div className="sticky top-32">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6">
-                  <Image
-                    src="/images/chair.jpg"
-                    alt="Chair of Governors"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-serif font-semibold text-xl text-brand-navy">
-                    Dr. Abdullah Rahman
-                  </h3>
-                  <p className="text-text-muted">Chair of Governors</p>
-                </div>
+        <Container>
+          <div className="max-w-3xl mx-auto">
+            <p className="text-body text-text-secondary mb-4">
+              As someone who grew up and studied in Oldham, it is truly humbling to serve as the Chair of a brand new school.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              At Westwood Boys School we aim to build on the success of Westwood High by supporting our learners as they transition through adolescence into adulthood. We want them to grow into their humanity and become invaluable members of modern Britain.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              It gives me great joy to learn about the positive impact our school is already having on learners, parents and all members of the school community. The passion and dedication to teaching and learning demonstrated by teachers and learners is truly inspiring. We hope to report back to you in the coming years once learners have sat public examinations.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              Our school promotes a strong culture of self-respect and mutual respect and tolerance for people of other faiths and no faith. Our ethos is shaped by our school community. Staff, students and parents feel like we are one big family!
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              We are still a very small new school and I appreciate the important contribution our parents and local community have made towards our journey so far. I want to thank you for your support and your trust. I want to assure you that our leadership team will strive to make every day special for your child.
+            </p>
+
+            <p className="text-body text-text-secondary mb-8">
+              Thank you for visiting our school website.
+            </p>
+
+            <div>
+              <div className="font-serif font-semibold text-brand-navy text-lg">
+                Jamal Khan
               </div>
-            </div>
-
-            {/* Message Content */}
-            <div className="lg:w-2/3">
-              <div className="relative mb-8">
-                <Quote className="absolute -top-4 -left-6 w-16 h-16 text-accent-gold/20" />
-                <p className="text-body-lg text-text-secondary italic pl-8">
-                  Assalamu Alaikum wa Rahmatullahi wa Barakatuh,
-                </p>
-              </div>
-
-              <div className="prose prose-lg prose-slate max-w-none">
-                <p>
-                  It is my great pleasure to welcome you to Westwood Boys School. As Chair
-                  of Governors, I am privileged to work alongside an exceptional team of
-                  governors, staff, and parents who share a common vision: to provide our
-                  young men with an education that will prepare them to succeed in this
-                  life and the next.
-                </p>
-
-                <p>
-                  When our founders established this school over a decade ago, they had a
-                  simple but profound belief: that Muslim boys deserve access to outstanding
-                  education that nurtures both their academic potential and their spiritual
-                  growth. This belief remains at the heart of everything we do today.
-                </p>
-
-                <p>
-                  Our motto, &ldquo;Change The World,&rdquo; is not just a slogan – it is
-                  a call to action. We want our students to leave Westwood Boys School not
-                  only with excellent qualifications but also with the character, confidence,
-                  and conviction to make a positive difference wherever they go.
-                </p>
-
-                <p>
-                  The Board of Governors is committed to:
-                </p>
-
-                <ul>
-                  <li>Maintaining the highest standards of academic excellence</li>
-                  <li>Ensuring strong Islamic ethos and values across school life</li>
-                  <li>Providing a safe, supportive, and inclusive environment</li>
-                  <li>Supporting our dedicated staff in their important work</li>
-                  <li>Engaging constructively with parents and the wider community</li>
-                  <li>Planning for the long-term sustainability and growth of the school</li>
-                </ul>
-
-                <p>
-                  I encourage all prospective parents to visit our school and experience
-                  firsthand the warm, purposeful atmosphere that makes Westwood Boys School
-                  special. Our students are a testament to what can be achieved when academic
-                  ambition is combined with strong values and caring support.
-                </p>
-
-                <p>
-                  May Allah bless our school community and guide our young men to become
-                  the leaders and changemakers that our Ummah and society need.
-                </p>
-
-                <p className="mt-8">
-                  Wassalamu Alaikum,
-                  <br />
-                  <strong className="text-brand-navy">Dr. Abdullah Rahman</strong>
-                  <br />
-                  <span className="text-text-muted">Chair of Governors</span>
-                </p>
-              </div>
+              <div className="text-text-muted text-sm">Chair of Governors</div>
             </div>
           </div>
         </Container>
       </Section>
-
-      <CTASection />
     </>
   )
 }

@@ -58,10 +58,9 @@ export function Footer() {
       </div>
 
       <Container className="relative">
-        {/* Main Footer Content */}
+        {/* Main Footer Content — commented out until content is ready
         <div className="py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
-            {/* Brand Column */}
             <div className="lg:col-span-2">
               <Link href="/" className="flex items-center gap-3 mb-6">
                 <div className="relative w-14 h-14 bg-white rounded-xl p-2">
@@ -81,31 +80,27 @@ export function Footer() {
                 An independent Muslim secondary school nurturing tomorrow&apos;s leaders through faith and excellence.
               </p>
               <div className="space-y-3">
-                <a href="tel:01onal123456" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <a href="tel:01614590024" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                   <Phone className="w-5 h-5" />
-                  <span>01onal 123 456</span>
+                  <span>0161 459 0024</span>
                 </a>
-                <a href="mailto:info@westwoodboys.org" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <a href="mailto:office@westwoodboysschool.org" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
-                  <span>info@westwoodboys.org</span>
+                  <span>office@westwoodboysschool.org</span>
                 </a>
                 <div className="flex items-start gap-3 text-white/70">
                   <MapPin className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span>123 School Lane<br />Town, County<br />AB1 2CD</span>
+                  <span>121 Union Street<br />Oldham<br />OL1 1TE</span>
                 </div>
               </div>
             </div>
 
-            {/* Navigation Columns */}
             <div>
               <h3 className="font-serif font-semibold text-lg mb-4">About</h3>
               <ul className="space-y-3">
                 {footerNavigation.about.map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
+                    <Link href={item.href} className="text-white/70 hover:text-white transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -118,10 +113,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerNavigation.academics.map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
+                    <Link href={item.href} className="text-white/70 hover:text-white transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -134,10 +126,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerNavigation.parents.map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
+                    <Link href={item.href} className="text-white/70 hover:text-white transition-colors">
                       {item.label}
                     </Link>
                   </li>
@@ -150,17 +139,13 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerNavigation.quickLinks.map((item) => (
                   <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
+                    <Link href={item.href} className="text-white/70 hover:text-white transition-colors">
                       {item.label}
                     </Link>
                   </li>
                 ))}
               </ul>
 
-              {/* Social Links */}
               <div className="mt-8">
                 <h4 className="text-sm font-medium mb-3">Follow Us</h4>
                 <div className="flex gap-3">
@@ -179,6 +164,7 @@ export function Footer() {
             </div>
           </div>
         </div>
+        */}
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-white/10">
@@ -186,7 +172,7 @@ export function Footer() {
             <div className="text-sm text-white/60">
               &copy; {new Date().getFullYear()} Westwood Boys School. All rights reserved.
             </div>
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
+            {/* <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <Link href="/privacy" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
@@ -199,7 +185,7 @@ export function Footer() {
               <Link href="/safeguarding" className="hover:text-white transition-colors">
                 Safeguarding
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

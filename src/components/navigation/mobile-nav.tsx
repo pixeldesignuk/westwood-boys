@@ -89,7 +89,7 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
             </div>
 
             <div className="mt-8 pt-6 border-t border-slate-200">
-              <Button
+              {/* <Button
                 variant="cta"
                 size="lg"
                 className="w-full"
@@ -97,7 +97,7 @@ export function MobileNav({ isScrolled }: MobileNavProps) {
                 onClick={() => setIsOpen(false)}
               >
                 <Link href="/admissions">Book a Visit</Link>
-              </Button>
+              </Button> */}
             </div>
 
             {/* Contact Info */}

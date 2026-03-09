@@ -37,9 +37,9 @@ export function FaithValuesSection() {
               Building Character Through Faith
             </h2>
             <p className="text-body-lg text-white/80 mb-8">
-              At Westwood Boys School, Islamic values are at the heart of everything we do.
-              We nurture young men who are not only academically accomplished but also
-              morally grounded, compassionate, and ready to serve their communities.
+              &ldquo;To deliver a world class education in an environment that nurtures the
+              love for Allah; where both staff and students enjoy the best possible learning
+              experience and actively promote the highest of moral and spiritual values.&rdquo;
             </p>
 
             <ul className="space-y-4 mb-8">

@@ -1,36 +1,28 @@
 import Link from "next/link"
 import { ArrowRight, GraduationCap, BookOpen, Award, Users } from "lucide-react"
 import { Section, Container, SectionHeader } from "@/components/ui/section"
-import { StatsGrid } from "@/components/ui/stats"
 import { Button } from "@/components/ui/button"
-
-const stats = [
-  { value: 95, suffix: "%", label: "GCSE Pass Rate" },
-  { value: 15, label: "Average Class Size" },
-  { value: 12, label: "Subject Areas" },
-  { value: 100, suffix: "%", label: "University Progression" },
-]
 
 const highlights = [
   {
     icon: GraduationCap,
-    title: "Outstanding Results",
-    description: "Our students consistently achieve above national averages in GCSE examinations.",
+    title: "Student-Centred Learning",
+    description: "Low learner-teacher ratios allow us to deliver personalised education, stretching higher ability learners and supporting those who need it.",
   },
   {
     icon: BookOpen,
-    title: "Diverse Curriculum",
-    description: "A broad curriculum including Sciences, Humanities, Languages, and Islamic Studies.",
+    title: "Broad Curriculum",
+    description: "14 subjects at KS3 including English, Maths, Sciences, Arabic, History, Geography, Art, ICT, and Islamic Studies.",
   },
   {
     icon: Award,
     title: "Green Dome Academy",
-    description: "Integrated Islamic studies program developing spiritual and academic growth.",
+    description: "Integrated Islamic Studies, Quranic Studies, and Hadith Studies nurturing deep-rooted values alongside academic growth.",
   },
   {
     icon: Users,
-    title: "Expert Teachers",
-    description: "Qualified, passionate educators committed to every student's success.",
+    title: "GCSE Preparation",
+    description: "Learners begin GCSE work early, with pathways including Triple Science for higher ability students and optional community languages.",
   },
 ]
 
@@ -40,14 +32,9 @@ export function AcademicExcellenceSection() {
       <Container>
         <SectionHeader
           subtitle="Academic Excellence"
-          title="Preparing Students for Success"
-          description="Our rigorous academic programs combine with personalized support to help every student reach their full potential."
+          title="Unlocking the Potential of All Learners"
+          description="Our curriculum aims to help all learners achieve academic success through a broad, balanced and intellectually stimulating education."
         />
-
-        {/* Stats */}
-        <div className="mb-16">
-          <StatsGrid stats={stats} variant="card" />
-        </div>
 
         {/* Highlights Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

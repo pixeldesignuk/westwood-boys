@@ -1,93 +1,56 @@
 import type { Metadata } from "next"
-import { PageHero, ContentSection, CTASection } from "@/components/sections"
+import { PageHero } from "@/components/sections"
 import { Section, Container } from "@/components/ui/section"
-import { StatsGrid } from "@/components/ui/stats"
 
 export const metadata: Metadata = {
-  title: "Welcome",
-  description:
-    "Welcome to Westwood Boys School. Learn about our community, our values, and our commitment to nurturing tomorrow's leaders through academic excellence and Islamic values.",
+  title: "Welcome from the Principal",
+  description: "A welcome message from the Principal of Westwood Boys School.",
 }
-
-const stats = [
-  { value: 200, suffix: "+", label: "Students" },
-  { value: 15, label: "Average Class Size" },
-  { value: 95, suffix: "%", label: "GCSE Pass Rate" },
-  { value: 10, suffix: "+", label: "Years of Excellence" },
-]
 
 export default function WelcomePage() {
   return (
     <>
       <PageHero
-        title="Welcome to Westwood Boys School"
-        subtitle="About Us"
-        description="Where faith meets excellence. An independent Muslim secondary school nurturing tomorrow's leaders."
+        title="Welcome from the Principal"
+        subtitle="Our School"
       />
 
-      <ContentSection
-        image="/images/school-building.jpg"
-        imageAlt="Westwood Boys School building"
-        imagePosition="right"
-      >
-        <p className="text-body-lg text-text-secondary mb-6">
-          Welcome to Westwood Boys School, an independent Muslim secondary school
-          dedicated to nurturing young men who will make a positive impact on the world.
-        </p>
-        <p className="text-body text-text-secondary mb-6">
-          Our school combines rigorous academic standards with Islamic values, creating
-          an environment where students can excel both intellectually and spiritually.
-          We believe that education is about more than just grades – it&apos;s about
-          developing character, building confidence, and preparing young people to
-          become responsible citizens and leaders.
-        </p>
-        <p className="text-body text-text-secondary">
-          With small class sizes, dedicated teachers, and a supportive community,
-          we provide the personalized attention that every student deserves. Our
-          curriculum is designed to challenge and inspire, while our pastoral care
-          ensures that every student feels valued and supported.
-        </p>
-      </ContentSection>
-
-      <Section background="slate" padding="default">
+      <Section background="white" padding="lg">
         <Container>
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-h2 text-brand-navy mb-4">
-              Our School at a Glance
-            </h2>
-            <p className="text-body-lg text-text-muted max-w-2xl mx-auto">
-              Numbers that reflect our commitment to excellence in education.
+          <div className="max-w-3xl mx-auto">
+            <p className="text-body text-text-secondary mb-4">
+              It is a very exciting time for us all at Westwood Boys School. We are keen to see learners thrive in the newest school in the borough.
             </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              Not only do we want our pupils to develop strong academic skills to help them access leading further and higher education institutions, we also want them to look back and cherish the memories and friendships that they will develop during their time with us.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              Our school aims to grow into a school that is popular with parents and an asset for the local community.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              We will build strong partnerships with schools and colleges in the borough to help improve educational outcomes for all children and young people in our town.
+            </p>
+
+            <p className="text-body text-text-secondary mb-4">
+              I would like to take this opportunity to introduce our new website where you can learn more about our new school.
+            </p>
+
+            <p className="text-body text-text-secondary mb-8">
+              Please take the time to browse our website and feel free to contact me if you would like to learn more.
+            </p>
+
+            <div>
+              <div className="font-serif font-semibold text-brand-navy text-lg">
+                Kamal Uddin Khan
+              </div>
+              <div className="text-text-muted text-sm">Principal</div>
+            </div>
           </div>
-          <StatsGrid stats={stats} variant="card" />
         </Container>
       </Section>
-
-      <ContentSection
-        title="Our Vision"
-        image="/images/students-learning.jpg"
-        imageAlt="Students engaged in learning"
-        imagePosition="left"
-        background="white"
-      >
-        <p className="text-body text-text-secondary mb-6">
-          We envision a world where young Muslim men are at the forefront of positive
-          change – in their families, communities, and the wider society. Our motto,
-          &ldquo;Change The World,&rdquo; reflects this aspiration.
-        </p>
-        <p className="text-body text-text-secondary mb-6">
-          To achieve this vision, we provide an education that:
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-text-secondary">
-          <li>Develops academic excellence and critical thinking</li>
-          <li>Nurtures strong Islamic identity and values</li>
-          <li>Builds leadership skills and confidence</li>
-          <li>Promotes physical wellbeing and healthy lifestyles</li>
-          <li>Encourages service to community and society</li>
-        </ul>
-      </ContentSection>
-
-      <CTASection />
     </>
   )
 }

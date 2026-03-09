@@ -12,46 +12,39 @@ export interface NavSection {
 
 export const navigation: NavSection[] = [
   {
-    label: "About",
+    label: "Our School",
     items: [
-      { label: "Welcome", href: "/about/welcome", description: "Learn about our school community" },
+      { label: "Welcome from the Principal", href: "/about/welcome", description: "Learn about our school community" },
       { label: "Our Mission", href: "/about/mission", description: "Faith, excellence, and character" },
-      { label: "Our Journey", href: "/about/journey", description: "Our history and milestones" },
-      { label: "Chair's Message", href: "/about/chairs-message", description: "Message from the Chair of Governors" },
+      { label: "British Values", href: "/about/british-values", description: "Our commitment to British values" },
+      { label: "Message from the Chair of Governors", href: "/about/chairs-message", description: "Message from the Chair of Governors" },
       { label: "Inspection Reports", href: "/about/reports", description: "Ofsted and inspection results" },
       { label: "School Performance", href: "/about/performance", description: "Academic results and data" },
-    ],
-  },
-  {
-    label: "Academics",
-    items: [
-      { label: "Curriculum", href: "/academics/curriculum", description: "Our academic programs" },
-      { label: "Teaching & Learning", href: "/academics/teaching-learning", description: "Our approach to education" },
-      { label: "Specialism", href: "/academics/specialism", description: "Areas of special focus" },
-      { label: "Green Dome Academy", href: "/academics/green-dome", description: "Islamic studies program" },
-    ],
-  },
-  {
-    label: "Admissions",
-    items: [
-      { label: "Overview", href: "/admissions", description: "How to apply" },
-      { label: "Fees", href: "/admissions/fees", description: "Tuition and costs" },
-      { label: "Open Days", href: "/admissions/open-days", description: "Visit our school" },
+      { label: "The Green Dome Academy", href: "/about/green-dome", description: "Islamic studies program" },
+      { label: "Admissions", href: "/admissions", description: "How to apply" },
+      { label: "Contact", href: "/contact", description: "Get in touch" },
     ],
   },
   {
     label: "Parents",
     items: [
-      { label: "Resources", href: "/parents/resources", description: "Parent portal and downloads" },
-      { label: "Term Dates", href: "/parents/term-dates", description: "Academic calendar" },
       { label: "Policies", href: "/parents/policies", description: "School policies" },
-      { label: "Prayer Times", href: "/parents/prayer", description: "Daily prayer schedule" },
-      { label: "Sport & Recreation", href: "/parents/sport", description: "Physical education" },
-      { label: "British Values", href: "/parents/british-values", description: "Our commitment to British values" },
+      { label: "Term Dates", href: "/parents/term-dates", description: "Academic calendar" },
+      { label: "Fees", href: "/parents/fees", description: "Tuition and costs" },
+      { label: "Resources", href: "/parents/resources", description: "Parent portal and downloads" },
     ],
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: "About",
+    items: [
+      { label: "Our Journey", href: "/about/journey", description: "Our history and milestones" },
+      { label: "Curriculum", href: "/about/curriculum", description: "Our academic programs" },
+      { label: "Specialism", href: "/about/specialism", description: "Areas of special focus" },
+      { label: "Teaching & Learning", href: "/about/teaching-learning", description: "Our approach to education" },
+      { label: "Sport & Recreation", href: "/about/sport", description: "Physical education" },
+      { label: "Extra-Curricular", href: "/about/extra-curricular", description: "Activities beyond the classroom" },
+      { label: "Prayer", href: "/about/prayer", description: "Prayer facilities" },
+      { label: "News", href: "/about/news", description: "Latest school news" },
+    ],
   },
 ]

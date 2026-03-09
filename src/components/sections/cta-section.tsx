@@ -43,12 +43,12 @@ export function CTASection() {
               Questions? We&apos;re here to help.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-white">
-              <a href="tel:01234567890" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
+              <a href="tel:01614590024" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
                 <Phone className="w-4 h-4" />
-                01234 567 890
+                0161 459 0024
               </a>
-              <a href="mailto:admissions@westwoodboys.org" className="hover:text-accent-gold transition-colors">
-                admissions@westwoodboys.org
+              <a href="mailto:office@westwoodboysschool.org" className="hover:text-accent-gold transition-colors">
+                office@westwoodboysschool.org
               </a>
             </div>
           </div>

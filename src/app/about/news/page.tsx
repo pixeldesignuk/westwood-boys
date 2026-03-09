@@ -2,16 +2,16 @@ import type { Metadata } from "next"
 import { PageHero, ComingSoon } from "@/components/sections"
 
 export const metadata: Metadata = {
-  title: "Admissions",
-  description: "Admissions information for Westwood Boys School.",
+  title: "News",
+  description: "Latest news from Westwood Boys School.",
 }
 
-export default function AdmissionsPage() {
+export default function NewsPage() {
   return (
     <>
       <PageHero
-        title="Admissions"
-        subtitle="Our School"
+        title="News"
+        subtitle="About"
       />
       <ComingSoon />
     </>
