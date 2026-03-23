@@ -19,7 +19,7 @@ export default function WelcomePage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <p className="text-body text-text-secondary mb-4">
-              It is a very exciting time for us all at Westwood Boys School. We are keen to see learners thrive in the newest school in the borough.
+              It is a very exciting time for us all at Westwood Boys School. We are keen to see learners thrive in one of the newest schools in the borough.
             </p>
 
             <p className="text-body text-text-secondary mb-4">
@@ -35,7 +35,7 @@ export default function WelcomePage() {
             </p>
 
             <p className="text-body text-text-secondary mb-4">
-              I would like to take this opportunity to introduce our new website where you can learn more about our new school.
+              I would like to take this opportunity to introduce our new website where you can learn more about our school.
             </p>
 
             <p className="text-body text-text-secondary mb-8">

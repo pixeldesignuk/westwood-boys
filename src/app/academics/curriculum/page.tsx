@@ -1,17 +1,6 @@
 import type { Metadata } from "next"
-import { PageHero, ContentSection, CTASection } from "@/components/sections"
+import { PageHero, ContentSection } from "@/components/sections"
 import { Section, Container } from "@/components/ui/section"
-import {
-  BookOpen,
-  Calculator,
-  FlaskConical,
-  Globe,
-  Languages,
-  Palette,
-  Dumbbell,
-  Code,
-  Scroll,
-} from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Curriculum",
@@ -19,36 +8,34 @@ export const metadata: Metadata = {
     "Explore our broad and balanced curriculum at Westwood Boys School, combining academic excellence with Islamic studies.",
 }
 
-const keyStage3Subjects = [
-  { name: "English", icon: BookOpen },
-  { name: "Mathematics", icon: Calculator },
-  { name: "Science", icon: FlaskConical },
-  { name: "Islamic Studies", icon: Scroll },
-  { name: "Arabic", icon: Languages },
-  { name: "History", icon: Globe },
-  { name: "Geography", icon: Globe },
-  { name: "Computing", icon: Code },
-  { name: "Art & Design", icon: Palette },
-  { name: "Physical Education", icon: Dumbbell },
+const ks3Subjects = [
+  "English",
+  "Maths",
+  "Science",
+  "Arabic Language",
+  "Personal, Social, Health and Citizenship Education",
+  "Information and Communication Technology",
+  "Physical Education",
+  "History",
+  "Geography",
+  "Art and Design",
+  "Religious Studies",
+  "Islamic Studies",
+  "Quranic Studies",
 ]
 
 const gcseSubjects = [
-  {
-    category: "Core Subjects",
-    subjects: ["English Language", "English Literature", "Mathematics", "Combined Science / Triple Science"],
-  },
-  {
-    category: "Humanities",
-    subjects: ["History", "Geography", "Religious Studies (Islam)"],
-  },
-  {
-    category: "Languages",
-    subjects: ["Arabic", "Urdu"],
-  },
-  {
-    category: "Other Options",
-    subjects: ["Business Studies", "Computer Science", "Art & Design"],
-  },
+  "English Literature",
+  "English Language",
+  "Mathematics",
+  "Core Science",
+  "Additional Science",
+  "Triple Science",
+  "Information and Communication Technology",
+  "Religious Studies",
+  "Citizenship",
+  "History",
+  "Arabic",
 ]
 
 export default function CurriculumPage() {
@@ -57,122 +44,71 @@ export default function CurriculumPage() {
       <PageHero
         title="Our Curriculum"
         subtitle="Academics"
-        description="A broad, balanced curriculum that prepares students for success while nurturing Islamic values and character."
       />
 
       <ContentSection
         image="/images/curriculum-new.png"
-        imageAlt="Students in classroom"
+        imageAlt="Curriculum at Westwood Boys School"
         imagePosition="right"
       >
         <h2 className="font-serif text-h2 text-brand-navy mb-6">
-          Excellence in Education
+          Unlocking Potential
         </h2>
-        <p className="text-body-lg text-text-secondary mb-6">
-          Our curriculum is designed to challenge and inspire, providing students with
-          a solid foundation in core subjects while developing critical thinking,
-          creativity, and character.
+        <p className="text-body text-text-secondary mb-4">
+          Westwood Boys School is committed to unlocking the potential of all learners. The curriculum aims to help all learners achieve academic success through a broad, balanced and intellectually stimulating education. It seeks to provide learners with opportunities to fulfil individual potential both through independent effort and collective endeavour. The curriculum will embed the love of learning and support learners in developing enquiring minds.
         </p>
-        <p className="text-body text-text-secondary mb-6">
-          We follow the National Curriculum enhanced with Islamic studies and Arabic,
-          ensuring our students are well-prepared for GCSE examinations and beyond.
-          Our small class sizes allow for personalized attention and differentiated
-          teaching to meet each student&apos;s needs.
+        <p className="text-body text-text-secondary mb-4">
+          The aim of our curricular provision is, ultimately, to enable learners to benefit from the opportunities of adult life and to face its challenges. Learners will be encouraged to take on responsibilities in school, offered guidance and counselling to prepare them for the transition to the world of work. They will develop essential communication and interpersonal skills before they leave school.
+        </p>
+        <p className="text-body text-text-secondary mb-4">
+          A great deal of emphasis is laid upon the spiritual, moral, social and cultural development of all learners. The curriculum will enable learners to differentiate between right and wrong. This will help them become responsible citizens and productive members of society.
         </p>
         <p className="text-body text-text-secondary">
-          Islamic principles are woven throughout the curriculum, helping students
-          see the relevance of their faith to all areas of learning and life.
+          Fundamental British Values are embedded throughout the school curriculum. We hope that our educational offer will prepare all learners for the challenges and opportunities of modern Britain.
         </p>
       </ContentSection>
 
       <Section background="slate" padding="lg">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-h2 text-brand-navy mb-4">
-              Key Stage 3 (Years 7-9)
+              Key Stage 3
             </h2>
-            <p className="text-body-lg text-text-muted max-w-2xl mx-auto">
-              A broad foundation covering all essential subjects.
+            <p className="text-body text-text-secondary mb-6">
+              Teachers plan for each learner so that they are stretched and challenged appropriately. We aim to identify learners of higher aptitude early and push them so that they can exceed the national average. Learners are given additional support and helped through intervention sessions and after-school classes. This student-centred approach helps learners progress at their own pace.
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {keyStage3Subjects.map((subject) => (
-              <div
-                key={subject.name}
-                className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 rounded-full bg-brand-navy/10 flex items-center justify-center mx-auto mb-3">
-                  <subject.icon className="w-6 h-6 text-brand-navy" />
-                </div>
-                <h3 className="font-semibold text-brand-navy">{subject.name}</h3>
-              </div>
-            ))}
+            <p className="text-body text-text-secondary mb-4">
+              The following subjects are taught in Key Stage 3 to provide a comprehensive education:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 text-text-secondary">
+              {ks3Subjects.map((subject) => (
+                <li key={subject}>{subject}</li>
+              ))}
+            </ul>
           </div>
         </Container>
       </Section>
 
       <Section background="white" padding="lg">
         <Container>
-          <div className="text-center mb-12">
+          <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-h2 text-brand-navy mb-4">
-              GCSE Options (Years 10-11)
+              GCSE Qualifications
             </h2>
-            <p className="text-body-lg text-text-muted max-w-2xl mx-auto">
-              Students choose their GCSE subjects with guidance from teachers and parents.
+            <p className="text-body text-text-secondary mb-4">
+              Learners will start GCSE work during this phase. They will be working towards the following GCSE qualifications:
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {gcseSubjects.map((category) => (
-              <div
-                key={category.category}
-                className="bg-surface-slate rounded-2xl p-6"
-              >
-                <h3 className="font-serif font-semibold text-lg text-brand-navy mb-4 pb-3 border-b border-slate-200">
-                  {category.category}
-                </h3>
-                <ul className="space-y-2">
-                  {category.subjects.map((subject) => (
-                    <li key={subject} className="text-text-secondary flex items-start gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent-gold mt-2 shrink-0" />
-                      {subject}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <ul className="list-disc pl-6 space-y-2 text-text-secondary mb-6">
+              {gcseSubjects.map((subject) => (
+                <li key={subject}>{subject}</li>
+              ))}
+            </ul>
+            <p className="text-body text-text-secondary">
+              Learners will continue with their Individual learning plans in Quranic Studies and assessed at the end of each term.
+            </p>
           </div>
         </Container>
       </Section>
-
-      <ContentSection
-        title="Beyond the Classroom"
-        image="/images/extra-curricular.jpg"
-        imageAlt="Students in extracurricular activities"
-        imagePosition="left"
-        background="cream"
-      >
-        <p className="text-body text-text-secondary mb-6">
-          We believe education extends beyond academic subjects. Our enrichment program
-          includes:
-        </p>
-        <ul className="list-disc pl-6 space-y-2 text-text-secondary mb-6">
-          <li>Weekly Islamic Circle and Quran study</li>
-          <li>Sports clubs and inter-school competitions</li>
-          <li>Debate and public speaking</li>
-          <li>Coding and robotics club</li>
-          <li>Art and creative workshops</li>
-          <li>Community service projects</li>
-          <li>Educational trips and visits</li>
-        </ul>
-        <p className="text-body text-text-secondary">
-          These activities help students develop confidence, teamwork, and leadership
-          skills while pursuing their interests and passions.
-        </p>
-      </ContentSection>
-
-      <CTASection />
     </>
   )
 }

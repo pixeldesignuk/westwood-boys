@@ -36,9 +36,9 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <a href="tel:01614590024" className="flex items-center gap-3 text-text-secondary hover:text-brand-navy transition-colors">
+                <a href="tel:01614253599" className="flex items-center gap-3 text-text-secondary hover:text-brand-navy transition-colors">
                   <Phone className="w-5 h-5 text-brand-navy" />
-                  0161 459 0024
+                  0161 425 3599
                 </a>
 
                 <a href="mailto:office@westwoodboysschool.org" className="flex items-center gap-3 text-text-secondary hover:text-brand-navy transition-colors">

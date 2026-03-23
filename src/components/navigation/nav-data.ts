@@ -20,7 +20,7 @@ export const navigation: NavSection[] = [
       { label: "Message from the Chair of Governors", href: "/about/chairs-message", description: "Message from the Chair of Governors" },
       { label: "Inspection Reports", href: "/about/reports", description: "Ofsted and inspection results" },
       { label: "School Performance", href: "/about/performance", description: "Academic results and data" },
-      { label: "The Green Dome Academy", href: "/about/green-dome", description: "Islamic studies program" },
+      { label: "The Green Dome Academy", href: "/about/green-dome", description: "Proprietor" },
       { label: "Admissions", href: "/admissions", description: "How to apply" },
       { label: "Contact", href: "/contact", description: "Get in touch" },
     ],

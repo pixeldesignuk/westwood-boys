@@ -44,16 +44,14 @@ export function HeroSection() {
 
       {/* Content — bottom-aligned on mobile, centered on desktop */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 pt-48 sm:pb-32 lg:py-40">
-        <div className="w-full lg:w-3/5">
-          {/* Tagline — 2/5 width on desktop */}
-          <div className="mb-3 lg:mb-6 lg:w-2/3">
+        <div className="w-full lg:w-[70%]">
+          {/* Tagline */}
+          <div className="mb-3 lg:mb-6">
             <h1
               className="font-serif text-[3.5rem] sm:text-6xl lg:text-[5.5rem] text-white font-semibold tracking-tight leading-[1.05]"
               style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
             >
-              Change{" "}
-              <br className="lg:hidden" />
-              the World
+              Pupils are proud to attend Westwood Boys School
             </h1>
           </div>
 
@@ -62,9 +60,9 @@ export function HeroSection() {
             className="text-sm sm:text-base lg:text-lg text-white/90 mb-6 lg:mb-10 leading-relaxed"
             style={{ textShadow: "0 1px 4px rgba(0,0,0,0.35)" }}
           >
-            Where faith meets excellence. An independent Muslim secondary school
-            nurturing tomorrow&apos;s leaders through academic rigour, character development,
-            and Islamic values.
+            Pupils flourish academically and personally at this school. They benefit
+            from the supportive and respectful relationships that are built between
+            pupils and staff. Pupils said that they are happy (Ofsted, 2023).
           </p>
 
           {/* CTA Buttons */}
@@ -90,23 +88,23 @@ export function HeroSection() {
           <div className="grid grid-cols-4 gap-6 lg:gap-8">
             <TrustItem
               icon="star"
-              title="Outstanding"
-              subtitle="Ofsted Rating"
+              title="Good"
+              subtitle="Ofsted rating"
             />
             <TrustItem
               icon="users"
-              title="Small Classes"
-              subtitle="Personalized attention"
+              title="World Class"
+              subtitle="World Class Education"
             />
             <TrustItem
               icon="heart"
-              title="Faith & Values"
-              subtitle="Islamic foundation"
+              title="Behaviour"
+              subtitle="Outstanding Behaviour"
             />
             <TrustItem
               icon="award"
-              title="British Values"
-              subtitle="Preparing citizens"
+              title="Spiritual"
+              subtitle="Spiritual Values"
             />
           </div>
         </div>

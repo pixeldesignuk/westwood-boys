@@ -19,7 +19,7 @@ export default function ChairsMessagePage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <p className="text-body text-text-secondary mb-4">
-              As someone who grew up and studied in Oldham, it is truly humbling to serve as the Chair of a brand new school.
+              As someone who grew up and studied in Oldham, it is truly humbling to serve as the Chair of this school.
             </p>
 
             <p className="text-body text-text-secondary mb-4">
