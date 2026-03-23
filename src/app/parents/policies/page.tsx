@@ -1,16 +1,28 @@
 import type { Metadata } from "next"
 import { PageHero } from "@/components/sections"
 import { Section, Container } from "@/components/ui/section"
+import { Download } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Policies",
   description: "School policies at Westwood Boys School.",
 }
 
-const policies = [
-  "Safeguarding Policy",
+const downloadablePolicies = [
+  {
+    title: "Safeguarding Policy",
+    date: "1 September 2025",
+    downloadUrl: "/documents/safeguarding-policy-september-2025.pdf",
+  },
+  {
+    title: "Keeping Children Safe in Education 2025 – Part 1",
+    date: "2025",
+    downloadUrl: "/documents/kcsie-2025-part-1.pdf",
+  },
+]
+
+const otherPolicies = [
   "Allegations Against Staff and Low Level Concerns",
-  "Keeping Children Safe in Education – Part 1",
   "Relationships and Sex Education Policy",
   "Admissions Policy",
   "Curriculum Policy",
@@ -37,11 +49,35 @@ export default function PoliciesPage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <p className="text-body text-text-secondary mb-8">
+              The following key policies are available to download:
+            </p>
+
+            <ul className="divide-y divide-slate-200 mb-12">
+              {downloadablePolicies.map((policy) => (
+                <li key={policy.title} className="py-4 flex items-center justify-between">
+                  <div>
+                    <p className="font-medium text-brand-navy">{policy.title}</p>
+                    <p className="text-text-muted text-sm">{policy.date}</p>
+                  </div>
+                  <a
+                    href={policy.downloadUrl}
+                    download
+                    className="inline-flex items-center gap-2 text-brand-navy hover:text-accent-gold transition-colors text-sm font-medium"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <h2 className="font-serif text-h3 text-brand-navy mb-6">Other Policies</h2>
+            <p className="text-body text-text-secondary mb-6">
               The following policies are available upon request:
             </p>
 
             <ul className="divide-y divide-slate-200">
-              {policies.map((policy) => (
+              {otherPolicies.map((policy) => (
                 <li key={policy} className="py-3 text-text-secondary">
                   {policy}
                 </li>

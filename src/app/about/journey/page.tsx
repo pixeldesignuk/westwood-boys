@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
-import { PageHero } from "@/components/sections"
-import { Section, Container } from "@/components/ui/section"
+import { PageHero, ContentSection } from "@/components/sections"
 
 export const metadata: Metadata = {
   title: "Our Journey",
@@ -15,23 +14,24 @@ export default function JourneyPage() {
         subtitle="About"
       />
 
-      <Section background="white" padding="lg">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-body text-text-secondary mb-4">
-              Westwood Boys School is an Independent Muslim Secondary School located in the heart of Oldham&apos;s Cultural Quarter.
-            </p>
-
-            <p className="text-body text-text-secondary mb-4">
-              As a relatively small school, teachers will use the low learner-teacher ratio to deliver a student-centred education.
-            </p>
-
-            <p className="text-body text-text-secondary">
-              We hope that our educational offer will prepare our pupils for the challenges and opportunities of modern Britain.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <ContentSection
+        image="/images/our-journey.jpg"
+        imageAlt="Our Journey - Westwood Boys School"
+        imagePosition="right"
+      >
+        <h2 className="font-serif text-h2 text-brand-navy mb-6">
+          Our Story
+        </h2>
+        <p className="text-body-lg text-text-secondary mb-6">
+          Westwood Boys School is an Independent Muslim Secondary School located in the heart of Oldham&apos;s Cultural Quarter.
+        </p>
+        <p className="text-body text-text-secondary mb-6">
+          As a relatively small school, teachers will use the low learner-teacher ratio to deliver a student-centred education.
+        </p>
+        <p className="text-body text-text-secondary">
+          We hope that our educational offer will prepare our pupils for the challenges and opportunities of modern Britain.
+        </p>
+      </ContentSection>
     </>
   )
 }

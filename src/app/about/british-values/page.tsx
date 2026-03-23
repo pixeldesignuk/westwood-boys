@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { PageHero } from "@/components/sections"
 import { Section, Container } from "@/components/ui/section"
 
@@ -52,6 +53,14 @@ export default function BritishValuesPage() {
             </p>
 
             <h2 className="font-serif text-h3 text-brand-navy mb-4">The Rule of Law</h2>
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-6">
+              <Image
+                src="/images/british-values-rule-of-law.png"
+                alt="Rule of Law at Westwood Boys School"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-body text-text-secondary mb-8">
               The importance of laws, whether they be those that govern the class, the school, or the country, are consistently reinforced at our School. Students are taught the rules and expectations of the school which are highlighted by the student code of conduct. They are taught the value and the reasons behind laws that govern and protect us, the responsibilities that this involves and the consequences when laws are broken. Visits from authorities such as the Police and Fire Service reinforce this message.
             </p>
@@ -65,6 +74,14 @@ export default function BritishValuesPage() {
             </p>
 
             <h2 className="font-serif text-h3 text-brand-navy mb-4">Mutual Respect</h2>
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-6">
+              <Image
+                src="/images/british-values-mutual-respect.png"
+                alt="Mutual Respect at Westwood Boys School"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-body text-text-secondary mb-4">
               Respect is at the heart of our school. Students learn that their behaviour and conduct has an effect on their own rights and those of others. All members of the school community treat each other with respect and this is reiterated through the teaching and learning process.
             </p>
@@ -73,6 +90,14 @@ export default function BritishValuesPage() {
             </p>
 
             <h2 className="font-serif text-h3 text-brand-navy mb-4">Tolerance of Those of Different Faiths and Beliefs</h2>
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-6">
+              <Image
+                src="/images/british-values-tolerance.png"
+                alt="Tolerance of different faiths and beliefs at Westwood Boys School"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-body text-text-secondary mb-4">
               This is achieved through equipping students with the ability to understand their place in a culturally diverse society and by giving the opportunities to experience such diversity within the school community. Students benefit from a number of external visitors and educational and recreational visits. The Religious Studies curriculum provides a broad and balanced education on a range of faiths, religions and cultures.
             </p>

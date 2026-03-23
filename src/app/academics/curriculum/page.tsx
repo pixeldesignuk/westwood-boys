@@ -61,7 +61,7 @@ export default function CurriculumPage() {
       />
 
       <ContentSection
-        image="/images/curriculum.jpg"
+        image="/images/curriculum-new.png"
         imageAlt="Students in classroom"
         imagePosition="right"
       >

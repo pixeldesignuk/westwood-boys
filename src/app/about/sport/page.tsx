@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
-import { PageHero } from "@/components/sections"
-import { Section, Container } from "@/components/ui/section"
+import { PageHero, ContentSection } from "@/components/sections"
 
 export const metadata: Metadata = {
   title: "Sport & Recreation",
@@ -15,15 +14,18 @@ export default function SportPage() {
         subtitle="About"
       />
 
-      <Section background="white" padding="lg">
-        <Container>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-body text-text-secondary">
-              Learners will make use of local Sports Centres for their Physical Education. This will allow them to make use of the best facilities in the borough.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      <ContentSection
+        image="/images/sport-recreation.png"
+        imageAlt="Sport and Recreation at Westwood Boys School"
+        imagePosition="right"
+      >
+        <h2 className="font-serif text-h2 text-brand-navy mb-6">
+          Physical Education
+        </h2>
+        <p className="text-body text-text-secondary">
+          Learners will make use of local Sports Centres for their Physical Education. This will allow them to make use of the best facilities in the borough.
+        </p>
+      </ContentSection>
     </>
   )
 }
