@@ -139,11 +139,6 @@ function NavItemComponent({
                   <span className="font-medium text-brand-navy group-hover:text-accent-gold transition-colors">
                     {item.label}
                   </span>
-                  {item.description && (
-                    <span className="text-sm text-text-muted">
-                      {item.description}
-                    </span>
-                  )}
                 </Link>
               ))}
             </div>

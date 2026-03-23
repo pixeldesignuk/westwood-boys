@@ -19,9 +19,6 @@ export default function SportPage() {
         imageAlt="Sport and Recreation at Westwood Boys School"
         imagePosition="right"
       >
-        <h2 className="font-serif text-h2 text-brand-navy mb-6">
-          Physical Education
-        </h2>
         <p className="text-body text-text-secondary">
           Learners will make use of local Sports Centres for their Physical Education. This will allow them to make use of the best facilities in the borough.
         </p>

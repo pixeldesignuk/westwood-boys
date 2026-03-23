@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Westwood Boys School",
   },
   description:
-    "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values. Rated Good by Ofsted.",
+    "Westwood Boys School is an independent Muslim secondary school in Oldham. Pupils flourish academically and personally at this school.",
   keywords: [
     "Westwood Boys School",
     "Muslim school Oldham",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Westwood Boys School",
     title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
     description:
-      "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values.",
+      "Westwood Boys School is an independent Muslim secondary school in Oldham. Pupils flourish academically and personally at this school.",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
     description:
-      "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values.",
+      "Westwood Boys School is an independent Muslim secondary school in Oldham. Pupils flourish academically and personally at this school.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -95,7 +95,7 @@ const jsonLd = {
   "@type": "School",
   name: "Westwood Boys School",
   description:
-    "An independent Muslim secondary school in Oldham offering world class education, outstanding behaviour, and spiritual values.",
+    "An independent Muslim secondary school located in the heart of Oldham's Cultural Quarter.",
   url: "https://westwoodboys.org",
   logo: "https://westwoodboys.org/images/logo.png",
   image: "https://westwoodboys.org/images/og-image.jpg",
@@ -114,7 +114,7 @@ const jsonLd = {
     "@type": "Organization",
     name: "The Green Dome Academy",
   },
-  slogan: "World Class Education, Outstanding Behaviour, Spiritual Values",
+  slogan: "To deliver a world class education in an environment that nurtures the love for Allah",
 }
 
 export default function RootLayout({

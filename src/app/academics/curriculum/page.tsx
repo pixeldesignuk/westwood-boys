@@ -51,9 +51,6 @@ export default function CurriculumPage() {
         imageAlt="Curriculum at Westwood Boys School"
         imagePosition="right"
       >
-        <h2 className="font-serif text-h2 text-brand-navy mb-6">
-          Unlocking Potential
-        </h2>
         <p className="text-body text-text-secondary mb-4">
           Westwood Boys School is committed to unlocking the potential of all learners. The curriculum aims to help all learners achieve academic success through a broad, balanced and intellectually stimulating education. It seeks to provide learners with opportunities to fulfil individual potential both through independent effort and collective endeavour. The curriculum will embed the love of learning and support learners in developing enquiring minds.
         </p>

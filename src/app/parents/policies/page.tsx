@@ -26,7 +26,6 @@ const otherPolicies = [
   "Relationships and Sex Education Policy",
   "Admissions Policy",
   "Curriculum Policy",
-  "Assessment and Feedback Policy",
   "Anti-Bullying Policy",
   "Behaviour Policy",
   "Health and Safety Policy",

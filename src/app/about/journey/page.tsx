@@ -19,9 +19,6 @@ export default function JourneyPage() {
         imageAlt="Our Journey - Westwood Boys School"
         imagePosition="right"
       >
-        <h2 className="font-serif text-h2 text-brand-navy mb-6">
-          Our Story
-        </h2>
         <p className="text-body-lg text-text-secondary mb-6">
           Westwood Boys School is an Independent Muslim Secondary School located in the heart of Oldham&apos;s Cultural Quarter.
         </p>
