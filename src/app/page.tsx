@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import {
   HeroSection,
   // ValuePropositionSection,
@@ -8,6 +9,17 @@ import {
   // NewsEventsSection,
   // CTASection,
 } from "@/components/sections"
+
+export const metadata: Metadata = {
+  title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
+  description:
+    "Pupils are proud to attend Westwood Boys School. An independent Muslim secondary school in Oldham offering world class education, outstanding behaviour, and spiritual values.",
+  openGraph: {
+    title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
+    description:
+      "Pupils are proud to attend Westwood Boys School. An independent Muslim secondary school in Oldham offering world class education, outstanding behaviour, and spiritual values.",
+  },
+}
 
 export default function HomePage() {
   return (

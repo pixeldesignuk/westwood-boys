@@ -38,9 +38,9 @@ export const navigation: NavSection[] = [
     label: "About",
     items: [
       { label: "Our Journey", href: "/about/journey", description: "Our history and milestones" },
-      { label: "Curriculum", href: "/about/curriculum", description: "Our academic programs" },
-      { label: "Specialism", href: "/about/specialism", description: "Areas of special focus" },
-      { label: "Teaching & Learning", href: "/about/teaching-learning", description: "Our approach to education" },
+      { label: "Curriculum", href: "/academics/curriculum", description: "Our academic programmes" },
+      { label: "Specialism", href: "/academics/specialism", description: "Areas of special focus" },
+      { label: "Teaching & Learning", href: "/academics/teaching-learning", description: "Our approach to education" },
       { label: "Sport & Recreation", href: "/about/sport", description: "Physical education" },
       { label: "Extra-Curricular", href: "/about/extra-curricular", description: "Activities beyond the classroom" },
       { label: "Prayer", href: "/about/prayer", description: "Prayer facilities" },

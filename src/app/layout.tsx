@@ -19,22 +19,23 @@ const lato = Lato({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://westwoodboys.org"),
   title: {
-    default: "Westwood Boys School | Change The World",
+    default: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
     template: "%s | Westwood Boys School",
   },
   description:
-    "An independent Muslim secondary school nurturing tomorrow's leaders through academic excellence, Islamic values, and character development. Change the world with us.",
+    "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values. Rated Good by Ofsted.",
   keywords: [
     "Westwood Boys School",
-    "Muslim school",
+    "Muslim school Oldham",
     "Islamic school",
-    "independent school",
+    "independent school Oldham",
     "secondary school",
     "boys school",
     "Islamic education",
     "British values",
     "GCSE",
     "faith school",
+    "Oldham school",
   ],
   authors: [{ name: "Westwood Boys School" }],
   creator: "Westwood Boys School",
@@ -49,23 +50,23 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "/",
     siteName: "Westwood Boys School",
-    title: "Westwood Boys School | Change The World",
+    title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
     description:
-      "An independent Muslim secondary school nurturing tomorrow's leaders through academic excellence, Islamic values, and character development.",
+      "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Westwood Boys School - Change The World",
+        alt: "Westwood Boys School",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Westwood Boys School | Change The World",
+    title: "Westwood Boys School | Independent Muslim Secondary School in Oldham",
     description:
-      "An independent Muslim secondary school nurturing tomorrow's leaders through academic excellence, Islamic values, and character development.",
+      "Westwood Boys School is an independent Muslim secondary school in Oldham. World class education, outstanding behaviour, and spiritual values.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -94,27 +95,26 @@ const jsonLd = {
   "@type": "School",
   name: "Westwood Boys School",
   description:
-    "An independent Muslim secondary school nurturing tomorrow's leaders through academic excellence, Islamic values, and character development.",
+    "An independent Muslim secondary school in Oldham offering world class education, outstanding behaviour, and spiritual values.",
   url: "https://westwoodboys.org",
   logo: "https://westwoodboys.org/images/logo.png",
   image: "https://westwoodboys.org/images/og-image.jpg",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "123 School Lane",
-    addressLocality: "Town",
-    addressRegion: "County",
-    postalCode: "AB1 2CD",
+    streetAddress: "121 Union Street",
+    addressLocality: "Oldham",
+    addressRegion: "Greater Manchester",
+    postalCode: "OL1 1TE",
     addressCountry: "GB",
   },
-  telephone: "+44-1234-567890",
-  email: "info@westwoodboys.org",
+  telephone: "+44-161-425-3599",
+  email: "office@westwoodboysschool.org",
   sameAs: [],
-  numberOfStudents: {
-    "@type": "QuantitativeValue",
-    value: 200,
+  founder: {
+    "@type": "Organization",
+    name: "The Green Dome Academy",
   },
-  foundingDate: "2010",
-  slogan: "Change The World",
+  slogan: "World Class Education, Outstanding Behaviour, Spiritual Values",
 }
 
 export default function RootLayout({
